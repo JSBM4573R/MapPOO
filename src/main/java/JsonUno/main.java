@@ -69,6 +69,9 @@ public class main {
 
         PrincipalTwo principalTwo = new PrincipalTwo();
 
+        principalTwo.setNombreCompleto(principalOne.getFirstName()+" "+principalOne.getMiddleName()+" "+principalOne.getLastName()+" "+principalOne.getSecondLastName());
+        principalTwo.setSufijo(principalOne.getSuffix());
+
         List<Contactenos> listContactenos = new ArrayList<>();
         Contactenos contactenos = new Contactenos();
         contactenos.setTypoContacto(principalOne.getContactDetails().getContact().getContactDetailType());
@@ -79,8 +82,7 @@ public class main {
         datosContacto.setDatoDeContacto(principalOne.getSuffix());
         datosContacto.setListContactenos(listContactenos);
 
-        principalTwo.setNombreCompleto(principalOne.getFirstName()+" "+principalOne.getMiddleName()+" "+principalOne.getLastName()+" "+principalOne.getSecondLastName());
-        principalTwo.setSufijo(principalOne.getSuffix());
+
         principalTwo.setDatosContacto(datosContacto);
 
         Documento documento = new Documento();
